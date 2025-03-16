@@ -22,18 +22,18 @@ The events follow a **well-defined AVRO schema**, ensuring **structured** and **
 
 ```json
 {
-  "event_id": "string",
-  "timestamp": "string",
-  "event_type": "string",
-  "passenger_id": "string",
-  "driver_id": ["null", "string"],
-  "pickup_location": "string",
-  "dropoff_location": ["null", "string"],
-  "status": "string",
-  "fare": ["null", "float"],
-  "surge_multiplier": ["null", "float"],
-  "traffic_condition": ["null", "string"],
-  "vehicle_type": "string"
+  {"name": "event_id", "type": "string"},
+  {"name": "timestamp", "type": "string"},
+  {"name": "event_type", "type": "string"},
+  {"name": "passenger_id", "type": "string"},
+  {"name": "driver_id", "type": ["null", "string"], "default": None},
+  {"name": "pickup_location", "type": "string"},
+  {"name": "dropoff_location", "type": ["null", "string"], "default": None},
+  {"name": "status", "type": "string"},
+  {"name": "fare", "type": ["null", "float"], "default": None},
+  {"name": "surge_multiplier", "type": ["null", "float"], "default": None},
+  {"name": "traffic_condition", "type": ["null", "string"], "default": None},
+  {"name": "vehicle_type", "type": "string"}
 }
 ```
 
