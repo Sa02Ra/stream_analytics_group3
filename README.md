@@ -108,7 +108,7 @@ The events follow a **well-defined AVRO schema**, ensuring **structured** and **
 }
 ```
 
-##Example Generated Data (JSON)
+## Example Generated Data (JSON)
 
 ```json
 {
