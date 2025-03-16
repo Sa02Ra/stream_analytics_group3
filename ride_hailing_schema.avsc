@@ -1,0 +1,74 @@
+{
+    "type": "record",
+    "name": "RideHailingEvent",
+    "fields": [
+        {
+            "name": "event_id",
+            "type": "string"
+        },
+        {
+            "name": "timestamp",
+            "type": "string"
+        },
+        {
+            "name": "event_type",
+            "type": "string"
+        },
+        {
+            "name": "passenger_id",
+            "type": "string"
+        },
+        {
+            "name": "driver_id",
+            "type": [
+                "null",
+                "string"
+            ],
+            "default": null
+        },
+        {
+            "name": "pickup_location",
+            "type": "string"
+        },
+        {
+            "name": "dropoff_location",
+            "type": [
+                "null",
+                "string"
+            ],
+            "default": null
+        },
+        {
+            "name": "status",
+            "type": "string"
+        },
+        {
+            "name": "fare",
+            "type": [
+                "null",
+                "float"
+            ],
+            "default": null
+        },
+        {
+            "name": "surge_multiplier",
+            "type": [
+                "null",
+                "float"
+            ],
+            "default": null
+        },
+        {
+            "name": "traffic_condition",
+            "type": [
+                "null",
+                "string"
+            ],
+            "default": null
+        },
+        {
+            "name": "vehicle_type",
+            "type": "string"
+        }
+    ]
+}
