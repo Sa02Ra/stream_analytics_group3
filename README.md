@@ -14,6 +14,77 @@ This repository contains a Python-based **Ride-Hailing Event Generator** that si
 **Customizable event count via CLI**  
 **Includes surge pricing & traffic conditions**  
 
+## Objectives
+The project aims to:
+**Develop a Data Generator to simulate ride-hailing events.**
+**Implement AVRO serialization for structured data storage.**
+**Ensure realism and variety in generated data.**
+**Allow scalability to simulate varying demand loads.**
+**Provide a Flask API to download generated data.**
+
+
+
+## How to Run the Project  
+
+### Install Dependencies  
+
+Ensure you have **Python 3.7+** installed, then install the required libraries:  
+
+```
+pip install -r requirements.txt
+```
+
+OR manually install the dependencies:  
+
+```
+pip install json fastavro faker flask argparse logging
+```
+
+---
+
+### Run the Data Generator  
+
+To generate **500 ride-hailing events** (default):  
+
+```
+python main.py
+```
+
+To specify a **custom number of events**, use the `--events` flag:  
+
+```
+python main.py --events 1000
+```
+
+This will generate **ride_hailing_events.json** and **ride_hailing_events.avro** files in the project directory.  
+
+---
+
+### Download Generated Data via Flask API  
+
+The project also runs a **Flask server** that allows you to download the generated data.  
+
+#### Start the Flask server:  
+
+```
+python main.py
+```
+
+#### Download files using a web browser or `curl`:  
+
+- **Download JSON:** [http://127.0.0.1:5000/download/json](http://127.0.0.1:5000/download/json)  
+- **Download AVRO:** [http://127.0.0.1:5000/download/avro](http://127.0.0.1:5000/download/avro)  
+
+```
+# Download JSON
+curl -o ride_hailing_events.json http://127.0.0.1:5000/download/json
+
+# Download AVRO
+curl -o ride_hailing_events.avro http://127.0.0.1:5000/download/avro
+```
+
+Once downloaded, you can process the data for further analysis or visualization.
+
 
 
 ## Data Schema  
@@ -37,7 +108,29 @@ The events follow a **well-defined AVRO schema**, ensuring **structured** and **
 }
 ```
 
+##Example Generated Data (JSON)
 
+```json
+{
+  "event_id": "123e4567-e89b-12d3-a456-426614174000",
+  "timestamp": "2025-03-16T12:34:56.789Z",
+  "event_type": "passenger_request",
+  "passenger_id": "a1b2c3d4-e5f6-7g8h-9i0j-k1l2m3n4o5p6",
+  "driver_id": null,
+  "pickup_location": "123 Main St, New York, NY",
+  "dropoff_location": null,
+  "status": "requested",
+  "fare": null,
+  "surge_multiplier": null,
+  "traffic_condition": null,
+  "vehicle_type": "economy"
+}
+```
+
+## Future Improvements
+**Enhance event types with driver feedback & trip ratings.**
+**Implement Kafka or Azure EventHub for real-time event streaming.**
+**Expand data visualization with a dashboard.**
 
 ## Authors  
 
