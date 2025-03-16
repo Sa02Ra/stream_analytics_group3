@@ -39,6 +39,6 @@ The events follow a **well-defined AVRO schema**, ensuring **structured** and **
 
 
 
-## Author  
+## Authors  
 
 Developed by **Anna Picolli, Antoni Heresi, Hugo Suarez, Louisa Schiefer, Saleh Haidar and Sara Baldovino**
