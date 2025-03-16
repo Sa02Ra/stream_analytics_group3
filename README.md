@@ -70,21 +70,6 @@ The project also runs a **Flask server** that allows you to download the generat
 python main.py
 ```
 
-#### Download files using a web browser or `curl`:  
-
-- **Download JSON:** [http://127.0.0.1:5000/download/json](http://127.0.0.1:5000/download/json)  
-- **Download AVRO:** [http://127.0.0.1:5000/download/avro](http://127.0.0.1:5000/download/avro)  
-
-```
-# Download JSON
-curl -o ride_hailing_events.json http://127.0.0.1:5000/download/json
-
-# Download AVRO
-curl -o ride_hailing_events.avro http://127.0.0.1:5000/download/avro
-```
-
-Once downloaded, you can process the data for further analysis or visualization.
-
 
 
 ## Data Schema  
@@ -135,3 +120,4 @@ The events follow a **well-defined AVRO schema**, ensuring **structured** and **
 ## Authors  
 
 Developed by **Anna Picolli, Antoni Heresi, Hugo Suarez, Louisa Schiefer, Saleh Haidar and Sara Baldovino**
+University: **IE University**
